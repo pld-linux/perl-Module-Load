@@ -6,26 +6,35 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Module
 %define		pnam	Load
-Summary:	perl(Module::Load)
+Summary:	perl(Module::Load) - runtime require of both modules and files
 Name:		perl-Module-Load
 Version:	0.10
 Release:	0.1
-# note if it is "same as perl"
-License:	(enter GPL/LGPL/BSD/BSD-like/Artistic/other license name here)
+# "same as perl"
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ee40eb2fa3059381e43d1f14d414fe67
 URL:		http://search.cpan.org/dist/Module-Load
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with autodeps} || %{with tests}
-#BuildRequires:	perl-
+%if %{with autodeps} && %{with tests}
+# didnt found any required module, maybe i have to much installed to find
+#BuildRequires:	perl-Fi
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-perl(Module::Load)
+Perl module Module::Load eliminates the need to know whether you are trying to
+require either a file or a module. If you consult "perldoc -f require" you will
+see that "require" will behave differently when given a bareword or a string.
+In the case of a string, "require" assumes you are wanting to load a file. But
+in the case of a bareword, it assumes you mean a module.
+This gives nasty overhead when you are trying to dynamically require modules at 
+runtime, since you will need to change the module notation ("Acme::Comment") to
+a file notation fitting the particular platform you are on.  
+This module elimates the need for this overhead and will just DWYM.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
