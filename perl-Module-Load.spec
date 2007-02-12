@@ -7,7 +7,7 @@
 %define		pdir	Module
 %define		pnam	Load
 Summary:	Module::Load - runtime require of both modules and files
-Summary(pl.UTF-8):   Module::Load - wymaganie zarówno modułów jak i plików w czasie działania programu
+Summary(pl.UTF-8):	Module::Load - wymaganie zarówno modułów jak i plików w czasie działania programu
 Name:		perl-Module-Load
 Version:	0.10
 Release:	0.1
