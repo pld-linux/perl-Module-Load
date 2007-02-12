@@ -7,7 +7,7 @@
 %define		pdir	Module
 %define		pnam	Load
 Summary:	Module::Load - runtime require of both modules and files
-Summary(pl):	Module::Load - wymaganie zarówno modu³ów jak i plików w czasie dzia³ania programu
+Summary(pl.UTF-8):   Module::Load - wymaganie zarÃ³wno moduÅ‚Ã³w jak i plikÃ³w w czasie dziaÅ‚ania programu
 Name:		perl-Module-Load
 Version:	0.10
 Release:	0.1
@@ -38,16 +38,16 @@ to change the module notation ("Acme::Comment") to a file notation
 fitting the particular platform you are on. This module elimates the
 need for this overhead and will just DWYM.
 
-%description -l pl
-Modu³ Perla Module::Load eliminuje potrzebê wiedzy, czy próbujemy
-wczytaæ plik, czy modu³. Zgodnie z "perldoc -f require" instrukcja
-"require" zachowuje siê ró¿nie w przypadku podania s³owa i ³añcucha. W
-przypadku ³añcucha "require" zak³ada, ¿e chcemy wczytaæ plik.
-Natomiast w przypadku s³owa, zak³ada, ze chodzi o modu³. Daje to
-dodatkowy narzut je¶li próbujemy dynamicznie wczytywaæ modu³y w czasie
-dzia³ania programu, poniewa¿ musimy zmieniaæ notacjê modu³ow±
-("Acme::Comment") na notacjê plikow± dopasowuj±c siê do platformy. Ten
-modu³ eliminuje potrzebê tego narzutu i robi to, o co chodzi.
+%description -l pl.UTF-8
+ModuÅ‚ Perla Module::Load eliminuje potrzebÄ™ wiedzy, czy prÃ³bujemy
+wczytaÄ‡ plik, czy moduÅ‚. Zgodnie z "perldoc -f require" instrukcja
+"require" zachowuje siÄ™ rÃ³Å¼nie w przypadku podania sÅ‚owa i Å‚aÅ„cucha. W
+przypadku Å‚aÅ„cucha "require" zakÅ‚ada, Å¼e chcemy wczytaÄ‡ plik.
+Natomiast w przypadku sÅ‚owa, zakÅ‚ada, ze chodzi o moduÅ‚. Daje to
+dodatkowy narzut jeÅ›li prÃ³bujemy dynamicznie wczytywaÄ‡ moduÅ‚y w czasie
+dziaÅ‚ania programu, poniewaÅ¼ musimy zmieniaÄ‡ notacjÄ™ moduÅ‚owÄ…
+("Acme::Comment") na notacjÄ™ plikowÄ… dopasowujÄ…c siÄ™ do platformy. Ten
+moduÅ‚ eliminuje potrzebÄ™ tego narzutu i robi to, o co chodzi.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
