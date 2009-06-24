@@ -9,13 +9,13 @@
 Summary:	Module::Load - runtime require of both modules and files
 Summary(pl.UTF-8):	Module::Load - wymaganie zarówno modułów jak i plików w czasie działania programu
 Name:		perl-Module-Load
-Version:	0.12
-Release:	0.1
+Version:	0.16
+Release:	1
 # "same as perl"
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	be2f196d1f364887eb94d08bb1e24c1d
+# Source0-md5:	851a225e31621a66621f28a25ec53d9a
 URL:		http://search.cpan.org/dist/Module-Load/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
